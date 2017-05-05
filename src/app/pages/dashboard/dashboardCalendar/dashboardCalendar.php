@@ -1,0 +1,1 @@
+<div style="height: 650px;" id='calendar' class="blurCalendar"></div>
