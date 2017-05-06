@@ -1,0 +1,183 @@
+<div class="widgets">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="OTA Self Test Form" ba-panel-class="with-scroll">
+                <ba-wizard>
+                    <ba-wizard-step title="Request Form" form="vm.personalInfoForm">
+                        <form name="vm.personalInfoForm" novalidate>
+                            <label for="checkBoxCountry">Country</label>
+                            <div class="input-demo checkbox-demo row form-group has-feedback">
+                                <div class="col-sm-1">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="checkBoxPH" value="country1" ng-model="vm.personalInfoForm.country1">
+                                        <span>PH</span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-1">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="checkBoxTH" value="country2" ng-model="vm.personalInfoForm.country2">
+                                        <span>TH</span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-1">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="checkBoxMM" value="country3" ng-model="vm.personalInfoForm.country3">
+                                        <span>MM</span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-1">
+                                    <label class="checkbox-inline custom-checkbox nowrap">
+                                        <input type="checkbox" id="checkBoxLA" value="country4" ng-model="vm.personalInfoForm.country4">
+                                        <span>Latin America</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group adj-bottom has-feedback"
+                                         ng-class="{'has-error': vm.personalInfoForm.modelName.$invalid && (vm.personalInfoForm.modelName.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="inputModelName">Model Name</label>
+                                        <input type="text" class="form-control" id="inputModelName" name="modelname" placeholder="Model Name" ng-model="vm.personalInfo.modelName" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group adj-bottom has-feedback"
+                                         ng-class="{'has-error': vm.personalInfoForm.modelNumber.$invalid && (vm.personalInfoForm.modelNumber.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="inputModelNumber">Model Number</label>
+                                        <input type="text" class="form-control" id="inputModelNumber" name="modelnumber" placeholder="Model Number" ng-model="vm.personalInfo.modelNumber" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.qqAccount.$invalid && (vm.personalInfoForm.qqAccount.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="InputQQAccount">ODM QQ Account</label>
+                                        <input type="email" class="form-control" id="InputQQAccount" name="qqAccount" placeholder="Email" ng-model="vm.personalInfo.qqAccount" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="inputContactPerson">ODM Contact Person</label>
+                                        <select class="form-control" title="Contact Person" selectpicker required>
+                                            <option>Irish Vinluan</option>
+                                            <option>Annalou Pallarca</option>
+                                            <option>Jenina Mae Tsuchiya</option>
+                                            <option>Fraiz Barcelona</option>
+                                            <option>Mira Fracella Garcia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.email.$invalid && (vm.personalInfoForm.email.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="inputEmail">ODM Email Address</label>
+                                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" ng-model="vm.personalInfo.email" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="inputProductSpecialist">Product Specialist</label>
+                                        <select class="form-control" title="Product Specialist" selectpicker required>
+                                            <option>Nico Porras</option>
+                                            <option>Randy Aguinaldo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="inputTestEngineer">Mobile Testing Engineer</label>
+                                        <select class="form-control" title="Mobile Testing Engineer" selectpicker required>
+                                            <option>Iana Linag</option>
+                                            <option>Cassie Salvador</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Software Details" form="vm.productInfoForm">
+                        <form name="vm.productInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.productInfoForm.downloadLink.$invalid && (vm.productInfoForm.downloadLink.$dirty || vm.productInfoForm.$submitted)}">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control with-warning-addon" placeholder="@URL" aria-describedby="basic-addon2">
+                                            <span class="input-group-addon input-group-addon-warning addon-right" id="basic-addon2">OTA Package Download Link</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group has-feedback"
+                                         ng-class="{'has-error': vm.productInfoForm.sourceVersion.$invalid && (vm.productInfoForm.sourceVersion.$dirty || vm.productInfoForm.$submitted)}">
+                                        <label for="inputSourceVersion">Source Version</label>
+                                        <input type="text" class="form-control" id="inputSourceVersion" name="sourceVersion" placeholder="Source Version" ng-model="vm.productInfo.sourceVersion" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group"
+                                         ng-class="{'has-error': vm.productInfoForm.targetVersion.$invalid && (vm.productInfoForm.targetVersion.$dirty || vm.productInfoForm.$submitted)}">
+                                        <label for="inputTargetVersion">Target Version</label>
+                                        <input type="text" class="form-control" id="inputTargetVersion" name="targetVersion" placeholder="Target Version" ng-model="vm.productInfo.targetVersion" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group"
+                                         ng-class="{'has-error': vm.productInfoForm.imei1.$invalid && (vm.productInfoForm.imei1.$dirty || vm.productInfoForm.$submitted)}">
+                                        <label for="inputIMEI1">IMEI 1</label>
+                                        <input type="number" class="form-control" id="inputIMEI1" name="imei1" placeholder="IMEI" ng-model="vm.productInfo.imei1" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group"
+                                         ng-class="{'has-error': vm.productInfoForm.imei2.$invalid && (vm.productInfoForm.imei2.$dirty || vm.productInfoForm.$submitted)}">
+                                        <label for="inputIMEI2">IMEI 2</label>
+                                        <input type="number" class="form-control" id="inputIMEI2" name="imei2" placeholder="IMEI" ng-model="vm.productInfo.imei2" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group adj-min-bottom">
+                                        <label for="inputReleaseNotes">Release Notes</label>
+                                        <textarea class="form-control" id="inputReleaseNotes" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="inputInternalChanges">Internal Changes</label>
+                                        <span class="help-block sub-little-text">For market server OTAs only. Otherwise, fill in "NA".</span>
+                                        <textarea class="form-control" id="inputInternalChanges" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Finish">
+                        <form class="form-horizontal" name="vm.finishForm" novalidate>
+                            OTA Self Test Form Submitted!
+                        </form>
+                    </ba-wizard-step>
+                </ba-wizard>
+            </div>
+        </div>
+    </div>
+
+</div>
