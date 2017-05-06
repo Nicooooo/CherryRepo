@@ -21,18 +21,36 @@
 
         this.getMenuItems = function() {
           var states = defineMenuItemStates();
-          var menuItems = states.filter(function(item) {
-            return item.level == 0;
+          // var menuItems = states.filter(function(item) {
+          //   return item.level == 0;
+          // });
+
+          // menuItems.forEach(function(item) {
+          //   var children = states.filter(function(child) {
+          //     return child.level == 1 && child.name.indexOf(item.name) === 0;
+          //   });
+          //   item.subMenu = children.length ? children : null;
+          // });
+          var levels = states.map(function (e) {
+            return e.level;
+          }).filter(function (e, i, arr){
+            return i === arr.indexOf(e);
           });
 
-          menuItems.forEach(function(item) {
-            var children = states.filter(function(child) {
-              return child.level == 1 && child.name.indexOf(item.name) === 0;
+          levels.forEach(function (level) {
+            var menuItems = states.filter(function (e) {
+              return e.level === level;
             });
-            item.subMenu = children.length ? children : null;
+            menuItems.forEach(function (item) {
+              var children = states.filter(function (child) {
+                return child.level - level === 1 && child.name.indexOf(item.name) === 0;
+              });
+              item.subMenu = children.length ? children : null;
+            });
           });
-
-          return menuItems.concat(staticMenuItems);
+          return states.filter(function (e) {
+            return e.level === 0;
+          }).concat(staticMenuItems);
         };
 
         this.shouldMenuBeCollapsed = shouldMenuBeCollapsed;

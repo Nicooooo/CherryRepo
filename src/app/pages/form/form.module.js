@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form', ['ui.select', 'ngSanitize'])
+  angular.module('BlurAdmin.pages.form', ['ui.select', 'ngSanitize', 'BlurAdmin.pages.form.vas'])
       .config(routeConfig);
 
   /** @ngInject */
@@ -21,31 +21,12 @@
             order: 250,
           },
         })
-        .state('form.inputs', {
-          url: '/inputs',
-          templateUrl: 'app/pages/form/inputs/inputs.html',
-          title: 'Form Inputs',
+        .state('form.ticketing', {
+          url: '/ticketing',
+          templateUrl: 'app/pages/form/vas/vas.html',
+          title: 'Ticketing Request',
           sidebarMeta: {
             order: 0,
-          },
-        })
-        .state('form.layouts', {
-          url: '/layouts',
-          templateUrl: 'app/pages/form/layouts/layouts.html',
-          title: 'Form Layouts',
-          sidebarMeta: {
-            order: 100,
-          },
-        })
-        .state('form.wizard',
-        {
-          url: '/wizard',
-          templateUrl: 'app/pages/form/wizard/wizard.html',
-          controller: 'WizardCtrl',
-          controllerAs: 'vm',
-          title: 'Form Wizard',
-          sidebarMeta: {
-            order: 200,
           },
         });
   }

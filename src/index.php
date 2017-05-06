@@ -145,6 +145,7 @@
 <script src="app/pages/components/components.module.js"></script>
 <script src="app/pages/dashboard/dashboard.module.js"></script>
 <script src="app/pages/form/form.module.js"></script>
+<script src="app/pages/form/vas/vas.module.js"></script>
 <!-- <script src="app/pages/maps/maps.module.js"></script> -->
 <script src="app/pages/profile/profile.module.js"></script>
 <script src="app/pages/tables/tables.module.js"></script>
