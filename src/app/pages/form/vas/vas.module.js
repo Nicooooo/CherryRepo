@@ -19,30 +19,32 @@
           url: '/vas',
           template : '<ui-view autoscroll="true" autoscroll-body-top></ui-view>',
           abstract: true,
-          title: 'VAS Request',
+          title: 'VAS Form',
           sidebarMeta: {
-            order: 0,
+            order: 250,
           },
         })
         .state('form.vas.integration', {
-          url: '/ota_integration',
-          templateUrl: 'app/pages/form/vas/ota_integration/otaIntegration.html',
+          url: '/integration',
+          templateUrl: 'app/pages/form/vas/integration/integration.html',
           title: 'OTA Integration',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
-            order: 10,
+            order: 0,
           },
         })
         .state('form.vas.selftest', {
           url: '/selftest',
           templateUrl: 'app/pages/form/vas/selftest/selftest.html',
-          title: 'OTA Self-Test',
+          title: 'OTA SelfTest',
           sidebarMeta: {
             order: 10,
           },
         })
         .state('form.vas.marketserver', {
           url: '/marketserver',
-          templateUrl: 'app/pages/form/vas/vas.html',
+          templateUrl: 'app/pages/form/vas/marketserver/marketserver.html',
           title: 'OTA Market Server',
           sidebarMeta: {
             order: 20,
@@ -50,18 +52,42 @@
         })
         .state('form.vas.servicetest', {
           url: '/servicetest',
-          templateUrl: 'app/pages/form/vas/vas.html',
+          templateUrl: 'app/pages/form/vas/servicetest/servicetest.html',
           title: 'Service Test',
           sidebarMeta: {
             order: 30,
           },
         })
         .state('form.vas.masspro', {
-          url: '/masspro',
-          templateUrl: 'app/pages/form/vas/vas.html',
+          url: '/massproduction',
+          templateUrl: 'app/pages/form/vas/massproduction/massproduction.html',
           title: 'Mass Production',
           sidebarMeta: {
             order: 40,
+          },
+        })
+        .state('form.vas.apptesting', {
+          url: '/apptesting',
+          templateUrl: 'app/pages/form/vas/apptesting/apptesting.html',
+          title: 'Initial App Testing',
+          sidebarMeta: {
+            order: 50,
+          },
+        })
+        .state('form.vas.fingerprint', {
+          url: '/fingerprint',
+          templateUrl: 'app/pages/form/vas/fingerprint/fingerprint.html',
+          title: 'Fingerprint Request',
+          sidebarMeta: {
+            order: 60,
+          },
+        })
+        .state('form.vas.barphones', {
+          url: '/barphones',
+          templateUrl: 'app/pages/form/vas/barphones/barphones.html',
+          title: 'Barphones Porting',
+          sidebarMeta: {
+            order: 70,
           },
         });
   }

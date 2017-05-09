@@ -1,0 +1,95 @@
+<div class= "widget">
+	<div class="row">
+		<div class="col-md-12">
+			<div ba-panel ba-panel-title="Initial App Testing" ba-panel-class="with-scroll">
+        <form name="vm.requestForm" ng-submit="vm.submit()" ng-controller="VasCtrl" novalidate>
+          <label for="checkBoxCountry">Country</label>
+          <div class="input-demo checkbox-demo row form-group has-feedback">
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxPH" value="country1" ng-model="vm.requestForm.country1">
+                <span>PH</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxTH" value="country2" ng-model="vm.requestForm.country2">
+                <span>TH</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxMM" value="country3" ng-model="vm.requestForm.country3">
+                <span>MM</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxLA" value="country4" ng-model="vm.requestForm.country4">
+                <span>Latin America</span>
+              </label>
+            </div>
+          </div>
+				  <div class="row">
+  				  <div class="col-sm-3">
+    				  <div class="form-group adj-bottom has-feedback" ng-class="{'has-error': vm.requestForm.modelName.$invalid && (vm.requestForm.modelName.$dirty || vm.requestForm.$submitted)}">
+                <label for="inputModelName">Model Name</label>
+                <input type="text" class="form-control" id="inputModelName" name="modelname" placeholder="Model Name" ng-model="vm.requestForm.modelName" required>
+                <span class="help-block error-block basic-block" ng-show="vm.requestForm.modelName.$error.required">Required</span>
+              </div>
+    			  </div>
+    			  <div class="col-sm-2">
+    			    <div class="form-group adj-bottom" ng-class="{'has-error': vm.requestForm.modelnumber.$invalid && (vm.requestForm.modelnumber.$dirty || vm.requestForm.$submitted)}">
+      				  <label for="inputModelNumber">Model Number</label>
+      				  <input type="text" class="form-control" id="inputModelNumber" placeholder="Model Number" ng-model="vm.requestForm.modelnumber" required>
+                <span class="help-block error-block basic-block">Required</span>
+    			    </div>
+  				  </div>
+				  </div>
+				  <div class="row">
+  					<div class="col-sm-4">
+    					<div class="form-group">
+                <label for="inputContactPerson">ODM Contact Person</label>
+                <select class="form-control" ng-model="vm.requestForm.contactPerson" title="Contact Person" selectpicker required>
+                  <option>Irish Vinluan</option>
+                  <option>Annalou Pallarca</option>
+                  <option>Jenina Mae Tsuchiya</option>
+                  <option>Fraiz Barcelona</option>
+                  <option>Mira Fracella Garcia</option>
+                </select>
+              </div>
+  					</div>
+  					<div class="col-sm-4">
+    					<div class="form-group" ng-class="{'has-error': vm.requestForm.emailAddress.$invalid && (vm.requestForm.emailAddress.$dirty || vm.requestForm.$submitted)}">
+                <label for="inputEmailAddress">ODM Email Address</label>
+                <input type="email" class="form-control" id="inputEmailAddress" name="email" placeholder="Email" ng-model="vm.requestForm.emailAddress" required>
+                <span class="help-block error-block basic-block">Proper email required</span>
+              </div>
+  					</div>
+				  </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group adj-min-bottom" ng-class="{'has-error': vm.requestForm.qq.$invalid && (vm.requestForm.qq.$dirty || vm.requestForm.$submitted)}">
+                <label for="inputQQAccount">ODM QQ Account</label>
+                <input type="email" class="form-control" id="inputQQAccount" name="email" placeholder="E-mail / ID" ng-model="vm.requestForm.qq" required>
+                <span class="help-block error-block basic-block">Proper email required</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="inputTestEngineer">Mobile Testing Engineer</label>
+                <select class="form-control" title="Mobile Testing Engineer" ng-model="vm.requestForm.testEngineer" selectpicker required>
+                  <option>Iana Linag</option>
+                  <option>Cassie Salvador</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <ul class="pager ba-wizard-pager">
+            <li class="previous"><button type="submit" class="btn btn-primary" ng-disabled="vm.requestForm.$invalid">Submit</button></li>
+          </ul>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

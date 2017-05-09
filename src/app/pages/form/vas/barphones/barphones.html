@@ -1,0 +1,104 @@
+<div class= "widget">
+  <div class="row">
+    <div class="col-md-12">
+      <div ba-panel ba-panel-title="Barphones Porting" ba-panel-class="with-scroll">
+        <form name="vm.integrationForm" novalidate>
+          <label for="checkBoxCountry">Country</label>
+          <div class="input-demo checkbox-demo row form-group">
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxPH" value="country1" ng-model="vm.integrationForm.country1">
+                <span>PH</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxTH" value="country2" ng-model="vm.integrationForm.country2">
+                <span>TH</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxMM" value="country3" ng-model="vm.integrationForm.country3">
+                <span>MM</span>
+              </label>
+            </div>
+            <div class="col-sm-1">
+              <label class="checkbox-inline custom-checkbox nowrap">
+                <input type="checkbox" id="checkBoxLA" value="country4" ng-model="vm.integrationForm.country4">
+                <span>Latin America</span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group adj-bottom has-feedback" ng-class="{'has-error': vm.integrationForm.modelname.$invalid && (vm.integrationForm.modelname.$dirty || vm.integrationForm.$submitted)}">
+                <label for="inputModelName">Model Name</label>
+                <input type="text" class="form-control" id="inputModelName" placeholder="Model Name" ng-model="vm.integrationForm.modelname" required>
+                <span class="help-block error-block basic-block">Required</span>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group adj-bottom" ng-class="{'has-error': vm.integrationForm.modelnumber.$invalid && (vm.integrationForm.modelnumber.$dirty || vm.integrationForm.$submitted)}">
+                <label for="inputModelNumber">Model Number</label>
+                <input type="text" class="form-control" id="inputModelNumber" placeholder="Model Number" ng-model="vm.integrationForm.modelnumber" required>
+                <span class="help-block error-block basic-block">Required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group has-feedback" ng-class="{'has-error': vm.productInfoForm.chipset.$invalid && (vm.productInfoForm.chipset.$dirty || vm.productInfoForm.$submitted)}">
+                <label for="inputchipset">Chipset</label>
+                <input type="text" class="form-control" id="inputchipset" name="chipset" placeholder="Chipset" ng-model="vm.productInfo.chipset" required>
+                <span class="help-block error-block basic-block">Required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="inputContactPerson">ODM Contact Person</label>
+                <select class="form-control" title="Contact Person" selectpicker required>
+                  <option>Irish Vinluan</option>
+                  <option>Annalou Pallarca</option>
+                  <option>Jenina Mae Tsuchiya</option>
+                  <option>Fraiz Barcelona</option>
+                  <option>Mira Fracella Garcia</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group" ng-class="{'has-error': vm.integrationForm.emailAddress.$invalid && (vm.integrationForm.emailAddress.$dirty || vm.integrationForm.$submitted)}">
+                <label for="inputEmailAddress">ODM Email Address</label>
+                <input type="email" class="form-control" id="inputEmailAddress" name="email" placeholder="Email" ng-model="vm.integrationForm.emailAddress" required>
+                <span class="help-block error-block basic-block">Proper email required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group adj-min-bottom" ng-class="{'has-error': vm.integrationForm.qq.$invalid && (vm.integrationForm.qq.$dirty || vm.integrationForm.$submitted)}">
+                <label for="inputQQAccount">ODM QQ Account</label>
+                <input type="email" class="form-control" id="inputQQAccount" name="email" placeholder="E-mail / ID" ng-model="vm.integrationForm.qq" required>
+                <span class="help-block error-block basic-block">Proper email required</span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="inputTestEngineer">Mobile Testing Engineer</label>
+                <select class="form-control" title="Mobile Testing Engineer" selectpicker required>
+                  <option>Iana Linag</option>
+                  <option>Cassie Salvador</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <ul class="pager ba-wizard-pager">
+            <li class="previous"><button type="submit" class="btn btn-primary" ng-disabled="vm.requestForm.$invalid">Submit</button></li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
