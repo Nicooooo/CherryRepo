@@ -4,7 +4,7 @@
         <div class="col-md-12">
             <div ba-panel ba-panel-title="OTA Self Test Form" ba-panel-class="with-scroll">
                 <ba-wizard>
-                    <ba-wizard-step title="Request Form" form="vm.personalInfoForm">
+                    <ba-wizard-step title="Request Form">
                         <form name="vm.personalInfoForm" novalidate>
                             <label for="checkBoxCountry">Country</label>
                             <div class="input-demo checkbox-demo row form-group has-feedback">
@@ -55,12 +55,12 @@
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="inputContactPerson">ODM Contact Person</label>
-                                        <select class="form-control" title="Contact Person" selectpicker required>
-                                            <option>Irish Vinluan</option>
-                                            <option>Annalou Pallarca</option>
-                                            <option>Jenina Mae Tsuchiya</option>
-                                            <option>Fraiz Barcelona</option>
-                                            <option>Mira Fracella Garcia</option>
+                                        <select class="form-control" title="Contact Person" name="ODM" ng-model="vm.personalInfo.odm" selectpicker required>
+                                            <option value="Irish Vinluan">Irish Vinluan</option>
+                                            <option value="Irish Vinluan">Annalou Pallarca</option>
+                                            <option value="Irish Vinluan">Jenina Mae Tsuchiya</option>
+                                            <option value="Irish Vinluan">Fraiz Barcelona</option>
+                                            <option value="Irish Vinluan">Mira Fracella Garcia</option>
                                         </select>
                                     </div>
                                 </div>
@@ -83,22 +83,22 @@
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="inputTestEngineer">Mobile Testing Engineer</label>
-                                        <select class="form-control" title="Mobile Testing Engineer" selectpicker required>
-                                            <option>Iana Linag</option>
-                                            <option>Cassie Salvador</option>
+                                        <select class="form-control" title="Mobile Testing Engineer" name="tester" ng-model="vm.personalInfo.tester" selectpicker required>
+                                            <option value="Iana Linag">Iana Linag</option>
+                                            <option value="Iana Linag">Cassie Salvador</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </ba-wizard-step>
-                    <ba-wizard-step title="Software Details" form="vm.productInfoForm">
-                        <form name="vm.productInfoForm" novalidate>
+                    <ba-wizard-step title="Software Details" >
+                        <form name="vm.personalIinfoForm" novalidate>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.productInfoForm.downloadLink.$invalid && (vm.productInfoForm.downloadLink.$dirty || vm.productInfoForm.$submitted)}">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.personalIinfoForm.downloadLink.$invalid && (vm.personalIinfoForm.downloadLink.$dirty || vm.personalIinfoForm.$submitted)}">
                                         <div class="input-group">
-                                            <input type="text" class="form-control with-warning-addon" placeholder="@url" aria-describedby="basic-addon2">
+                                            <input type="text" class="form-control with-warning-addon" placeholder="@url" aria-describedby="basic-addon2" ng-model="vm.personalIinfo.url">
                                             <span class="input-group-addon input-group-addon-warning addon-right" id="basic-addon2">OTA Package Download Link</span>
                                         </div>
                                     </div>
@@ -107,17 +107,17 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="form-group has-feedback"
-                                         ng-class="{'has-error': vm.productInfoForm.sourceVersion.$invalid && (vm.productInfoForm.sourceVersion.$dirty || vm.productInfoForm.$submitted)}">
+                                         ng-class="{'has-error': vm.personalIinfoForm.sourceVersion.$invalid && (vm.personalIinfoForm.sourceVersion.$dirty || vm.personalIinfoForm.$submitted)}">
                                         <label for="inputSourceVersion">Source Version</label>
-                                        <input type="text" class="form-control" id="inputSourceVersion" name="sourceVersion" placeholder="Source Version" ng-model="vm.productInfo.sourceVersion" required>
+                                        <input type="text" class="form-control" id="inputSourceVersion" name="sourceVersion" placeholder="Source Version" ng-model="vm.personalIinfo.sourceVersion" required>
                                         <span class="help-block error-block basic-block">Required</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group"
-                                         ng-class="{'has-error': vm.productInfoForm.targetVersion.$invalid && (vm.productInfoForm.targetVersion.$dirty || vm.productInfoForm.$submitted)}">
+                                         ng-class="{'has-error': vm.personalIinfoForm.targetVersion.$invalid && (vm.personalIinfoForm.targetVersion.$dirty || vm.personalIinfoForm.$submitted)}">
                                         <label for="inputTargetVersion">Target Version</label>
-                                        <input type="text" class="form-control" id="inputTargetVersion" name="targetVersion" placeholder="Target Version" ng-model="vm.productInfo.targetVersion" required>
+                                        <input type="text" class="form-control" id="inputTargetVersion" name="targetVersion" placeholder="Target Version" ng-model="vm.personalIinfo.targetVersion" required>
                                         <span class="help-block error-block basic-block">Required</span>
                                     </div>
                                 </div>
@@ -125,17 +125,17 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="form-group"
-                                         ng-class="{'has-error': vm.productInfoForm.imei1.$invalid && (vm.productInfoForm.imei1.$dirty || vm.productInfoForm.$submitted)}">
+                                         ng-class="{'has-error': vm.personalIinfoForm.imei1.$invalid && (vm.personalIinfoForm.imei1.$dirty || vm.personalIinfoForm.$submitted)}">
                                         <label for="inputIMEI1">IMEI 1</label>
-                                        <input type="number" class="form-control" id="inputIMEI1" name="imei1" placeholder="IMEI" ng-model="vm.productInfo.imei1" required>
+                                        <input type="number" class="form-control" id="inputIMEI1" name="imei1" placeholder="IMEI" ng-model="vm.personalIinfo.imei1" required>
                                         <span class="help-block error-block basic-block">Required</span>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group"
-                                         ng-class="{'has-error': vm.productInfoForm.imei2.$invalid && (vm.productInfoForm.imei2.$dirty || vm.productInfoForm.$submitted)}">
+                                         ng-class="{'has-error': vm.personalIinfoForm.imei2.$invalid && (vm.personalIinfoForm.imei2.$dirty || vm.personalIinfoForm.$submitted)}">
                                         <label for="inputIMEI2">IMEI 2</label>
-                                        <input type="number" class="form-control" id="inputIMEI2" name="imei2" placeholder="IMEI" ng-model="vm.productInfo.imei2" required>
+                                        <input type="number" class="form-control" id="inputIMEI2" name="imei2" placeholder="IMEI" ng-model="vm.personalIinfo.imei2" required>
                                         <span class="help-block error-block basic-block">Required</span>
                                     </div>
                                 </div>
@@ -144,6 +144,7 @@
                     </ba-wizard-step>
                     <ba-wizard-step title="Finish">
                         <form class="form-horizontal" name="vm.finishForm" novalidate>
+                        <button type="submit" ng-click="Submit()" class="btn btn-primary" ng-disabled="vm.personalIinfoForm.$invalid">Submit</button>
                             OTA Self Test Form Submitted!
                         </form>
                     </ba-wizard-step>

@@ -38,6 +38,8 @@
           url: '/selftest',
           templateUrl: 'app/pages/form/vas/selftest/selftest.html',
           title: 'OTA SelfTest',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 10,
           },
@@ -46,6 +48,8 @@
           url: '/marketserver',
           templateUrl: 'app/pages/form/vas/marketserver/marketserver.html',
           title: 'OTA Market Server',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 20,
           },
@@ -54,6 +58,8 @@
           url: '/servicetest',
           templateUrl: 'app/pages/form/vas/servicetest/servicetest.html',
           title: 'Service Test',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 30,
           },
@@ -62,6 +68,8 @@
           url: '/massproduction',
           templateUrl: 'app/pages/form/vas/massproduction/massproduction.html',
           title: 'Mass Production',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 40,
           },
@@ -70,6 +78,8 @@
           url: '/apptesting',
           templateUrl: 'app/pages/form/vas/apptesting/apptesting.html',
           title: 'Initial App Testing',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 50,
           },
@@ -78,6 +88,8 @@
           url: '/fingerprint',
           templateUrl: 'app/pages/form/vas/fingerprint/fingerprint.html',
           title: 'Fingerprint Request',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 60,
           },
@@ -86,6 +98,8 @@
           url: '/barphones',
           templateUrl: 'app/pages/form/vas/barphones/barphones.html',
           title: 'Barphones Porting',
+          controller: 'VasCtrl',
+          controllerAs: 'vm',
           sidebarMeta: {
             order: 70,
           },

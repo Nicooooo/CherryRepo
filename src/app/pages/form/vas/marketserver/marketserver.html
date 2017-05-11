@@ -161,6 +161,7 @@
                     </ba-wizard-step>
                     <ba-wizard-step title="Finish">
                         <form class="form-horizontal" name="vm.finishForm" novalidate>
+                         <button type="submit" ng-click="Submit()" class="btn btn-primary" ng-disabled="vm.requestForm.$invalid">Submit</button>
                             OTA Self Test Form Submitted!
                         </form>
                     </ba-wizard-step>
